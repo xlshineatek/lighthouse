@@ -46,7 +46,12 @@
      "justInTimeAccessPolicy": {
       "multiFactorAuthProvider": "Azure",
       "maximumActivationDuration": "PT1H",
-      "managedByTenantApprovers": []
+      "managedByTenantApprovers": [
+       {
+        "principalId": "7626806c-8541-4ba8-a93b-ffab667860bd",
+        "principalIdDisplayName": "Management"
+       }
+      ]
      },
      "principalId": "796d5d94-1f00-4452-b654-b186c15301a1",
      "principalIdDisplayName": "Lighthouse",
