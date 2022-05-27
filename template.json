@@ -31,31 +31,8 @@
    "defaultValue": [
     {
      "principalId": "796d5d94-1f00-4452-b654-b186c15301a1",
-     "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
      "principalIdDisplayName": "Lighthouse"
-    }
-   ]
-  },
-  "eligibleAuthorizations": {
-   "type": "array",
-   "metadata": {
-    "description": "Provide the auhtorizations that will have just-in-time role assignments on customer environments with support for approvals from the managing tenant"
-   },
-   "defaultValue": [
-    {
-     "justInTimeAccessPolicy": {
-      "multiFactorAuthProvider": "Azure",
-      "maximumActivationDuration": "PT1H",
-      "managedByTenantApprovers": [
-       {
-        "principalId": "7626806c-8541-4ba8-a93b-ffab667860bd",
-        "principalIdDisplayName": "Management"
-       }
-      ]
-     },
-     "principalId": "796d5d94-1f00-4452-b654-b186c15301a1",
-     "principalIdDisplayName": "Lighthouse",
-     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
     }
    ]
   }
@@ -73,8 +50,7 @@
     "registrationDefinitionName": "[parameters('mspOfferName')]",
     "description": "[parameters('mspOfferDescription')]",
     "managedByTenantId": "[parameters('managedByTenantId')]",
-    "authorizations": "[parameters('authorizations')]",
-    "eligibleAuthorizations": "[parameters('eligibleAuthorizations')]"
+    "authorizations": "[parameters('authorizations')]"
    }
   },
   {
@@ -97,10 +73,6 @@
   "authorizations": {
    "type": "array",
    "value": "[parameters('authorizations')]"
-  },
-  "eligibleAuthorizations": {
-   "type": "array",
-   "value": "[parameters('eligibleAuthorizations')]"
   }
  }
 }
